@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Long Trail — Part 1 (Triboar to Phandalin)</title><style>
+:root{--ink:#22201c;--mute:#6b665d;--paper:#fbf8f1;--card:#fff;--line:#e3dccd;
+--accent:#9a3b1e;--read:#fff6dc;--readb:#d9a400;--delay:#fdeaea;--delayb:#c0392b;
+--solve:#e9f6ea;--solveb:#2e7d32;--head:#3b2a1a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+font:17px/1.65 "Segoe UI",Verdana,"Helvetica Neue",Arial,sans-serif;letter-spacing:.01em}
+a{color:var(--accent)}
+.layout{display:grid;grid-template-columns:270px minmax(0,1fr);max-width:1180px;margin:0 auto}
+nav{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:22px 16px;
+border-right:1px solid var(--line);font-size:14.5px;line-height:1.4}
+nav .nt{font-weight:700;color:var(--head);margin:0 0 10px;font-size:15px}
+nav h4{margin:16px 0 6px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+nav a{display:block;padding:5px 8px;border-radius:6px;text-decoration:none;color:var(--ink)}
+nav a:hover{background:#efe8d8}
+main{padding:28px 34px 80px;min-width:0}
+header.cover{border-bottom:3px double var(--line);padding-bottom:18px;margin-bottom:10px}
+header.cover h1{font:700 34px/1.2 Georgia,"Times New Roman",serif;color:var(--head);margin:0 0 6px}
+header.cover .sub{color:var(--mute);font-size:15px}
+.glance{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0 0}
+.glance div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:14.5px}
+.glance b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);font-weight:600}
+.group{font:700 13px/1 Verdana,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#fff;
+background:var(--head);display:inline-block;padding:8px 14px;border-radius:999px;margin:44px 0 0}
+section{margin-top:26px;padding-top:8px}
+h2{font:700 27px/1.25 Georgia,"Times New Roman",serif;color:var(--head);margin:0 0 6px;
+padding-bottom:8px;border-bottom:2px solid var(--line)}
+.badge{display:inline-block;font:600 12px/1 Verdana,sans-serif;letter-spacing:.05em;text-transform:uppercase;
+background:#efe3c8;color:#5a4317;border-radius:999px;padding:6px 11px;margin:6px 0 4px}
+h3{font:700 20px/1.3 Georgia,"Times New Roman",serif;color:var(--accent);margin:30px 0 8px}
+p{margin:10px 0}
+ul,ol{padding-left:26px;margin:8px 0}
+li{margin:5px 0}
+strong{color:#14110d}
+blockquote.read{margin:14px 0;background:var(--read);border-left:6px solid var(--readb);
+border-radius:0 10px 10px 0;padding:10px 16px 12px;font-size:17.5px}
+blockquote.read .tag{display:block;font:700 11.5px/1 Verdana,sans-serif;letter-spacing:.08em;
+text-transform:uppercase;color:#8a6a00;margin-bottom:2px}
+blockquote.read p{margin:8px 0}
+.callout{border-left:6px solid;border-radius:0 10px 10px 0;padding:10px 14px}
+.callout.delay{background:var(--delay);border-color:var(--delayb)}
+.callout.solve{background:var(--solve);border-color:var(--solveb)}
+.dc{background:#e8eefc;color:#1c3a8a;border-radius:5px;padding:1px 6px;font-weight:700;white-space:nowrap;font-size:.93em}
+.tw{overflow-x:auto;margin:12px 0}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:15.5px;line-height:1.5}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f1e9d6;color:var(--head);font-size:13.5px;letter-spacing:.03em}
+tr:nth-child(even) td{background:#fdfbf6}
+.top{display:inline-block;margin-top:14px;font-size:13px;color:var(--mute);text-decoration:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-top:14px}
+.card{background:var(--card);border:2px dashed #b9ad92;border-radius:10px;padding:12px 14px;break-inside:avoid}
+.card h4{margin:0 0 8px;font:700 16px Georgia,serif;color:var(--head)}
+.card .row{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:4px 0;border-bottom:1px dotted var(--line);font-size:15px}
+.card .row span:last-child{white-space:nowrap;text-align:right}
+.box{display:inline-block;width:19px;height:19px;border:2px solid #555;border-radius:4px;margin:2px 3px 2px 0;vertical-align:middle;background:#fff}
+.small{font-size:13.5px;color:var(--mute)}
+footer{margin-top:50px;border-top:1px solid var(--line);padding-top:12px;font-size:13px;color:var(--mute)}
+@media (max-width:860px){.layout{display:block}nav{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}main{padding:18px}}
+@media print{
+ @page{size:A4;margin:15mm 14mm}
+ body{background:#fff;font-size:11.5pt;line-height:1.5}
+ .layout{display:block;max-width:none}
+ nav{position:static;height:auto;border:0;padding:0 0 6mm;break-after:page;font-size:10.5pt}
+ nav a{padding:2px 0}
+ main{padding:0}
+ section{break-before:page;margin-top:0}
+ section.first{break-before:auto}
+ .group{break-after:avoid;margin-top:0}
+ h2,h3{break-after:avoid}
+ blockquote.read,.callout,tr,.card,li{break-inside:avoid}
+ .tw{overflow:visible}
+ table{font-size:10pt}
+ .top{display:none}
+ a{color:inherit;text-decoration:none}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style></head>
+<body id="top"><div class="layout">
+<nav><p class="nt">🔔 The Long Trail · Part 1</p><h4>🧭 Start here</h4><a href="#dm-overview">🧭 DM overview</a><a href="#cast">👥 Cast</a><a href="#how-to-run-a-travel-day">🥾 How to run a travel day</a><h4>🛤️ The adventure</h4><a href="#scene-1-hired-in-triboar">🎭 Scene 1: Hired in Triboar</a><a href="#day-1-leaving-triboar">🥾 Day 1: Leaving Triboar</a><a href="#day-2-the-sea-of-grass">🥾 Day 2: The sea of grass</a><a href="#scene-2-night-watch">🐺 Scene 2: Night watch</a><a href="#day-3-the-wind-changes">🥾 Day 3: The wind changes</a><a href="#scene-3-the-eastbound-caravan">💬 Scene 3: The eastbound caravan</a><a href="#day-4-frost">🥾 Day 4: Frost</a><a href="#scene-4-the-white-dragon-and-the-ice-front">🐉 Scene 4: The white dragon and the ice front</a><a href="#scene-5-the-waystone-shelter">🚪 Scene 5: The waystone shelter</a><a href="#wrap-up">🏁 Wrap-up</a><h4>🧰 Reference</h4><a href="#dm-toolkit">🧰 DM toolkit</a><a href="#cards">✂️ Table cards to print</a></nav>
+<main>
+<header class="cover"><h1>🔔 The Long Trail — Part 1 (Triboar to Phandalin)</h1><div class="sub">Nov 12, 2026 · @human_bean · a road adventure leading into Dragon of Icespire Peak</div>
+<div class="glance"><div><b>Players</b>4–6</div><div><b>Level</b>1</div><div><b>Time</b>3 hours, or 2 × 90 min</div><div><b>Rules</b>D&D 2024</div><div><b>Route</b>Triboar → the waystone shelter</div><div><b>Days</b>1 to 4</div></div><p class="small" style="margin-top:14px">How to read this booklet: 📖 yellow boxes are text to read aloud · <span class="dc">DC 12</span> marks a dice check · ⏳ red boxes are delay checks · ✅ green boxes are puzzle answers.</p></header>
+<div class="group">🧭 Start here</div>
+<section id="dm-overview" class="first"><h2>🧭 DM overview</h2><p>The party guards an ox caravan carrying a bronze bell from Triboar to Phandalin, and Part 1 covers the first four days of a ten-day trip. It is written for 4–6 level 1 characters, one 3-hour session or two shorter ones, 2024 rules. Everything here is original draft material; change any of it.</p>
+<p><strong>The one rule that keeps this easy to run:</strong> the plains are open in every direction, but wagons need the trail and oxen need the known water stops. Players may scout anywhere. The caravan stays on the line.</p>
+<p><strong>Tone:</strong> played straight, with dry humour from the caravan crew. Each scene opens with a line from the caravan master's trail log, which also works as your recap.</p>
+<h3>⏱️ Session clock</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Scene</th>
+<th>Type</th>
+<th>Minutes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Hired in Triboar</td>
+<td>Roleplay</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Travel days 1 to 4 (about 7 minutes each)</td>
+<td>Description</td>
+<td>30</td>
+</tr>
+<tr>
+<td>2. Night watch</td>
+<td>Fight</td>
+<td>30</td>
+</tr>
+<tr>
+<td>3. The eastbound caravan</td>
+<td>Social</td>
+<td>25</td>
+</tr>
+<tr>
+<td>4. The white dragon and the ice front</td>
+<td>Spectacle</td>
+<td>30</td>
+</tr>
+<tr>
+<td>5. The waystone shelter</td>
+<td>Timed puzzle</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Wrap-up and level up</td>
+<td>Admin</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></div>
+<p>Running late? Cut Scene 3 to a two-minute exchange of rumours. Never cut Scene 4 or 5.</p>
+<h3>📏 Short, standard or long</h3>
+<p>The adventure stretches or shrinks to fit the table. Decide before you start, and change your mind mid-session if the mood changes.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Time</th>
+<th>What to run</th>
+<th>What to skip</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short</td>
+<td>About 90 minutes</td>
+<td>Scene 1 steps 1 and 2. One read-aloud per travel day. Scenes 2, 4 and 5.</td>
+<td>Shopping, Scene 3 (shout one rumour across the trail), all sightings, the watchtower.</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>3 hours</td>
+<td>Everything in the main text, with one or two sample lines per beat.</td>
+<td>Optional Triboar moments, random sightings, extra encounters.</td>
+</tr>
+<tr>
+<td>Long</td>
+<td>Two sessions of 2 to 2.5 hours</td>
+<td>Everything, plus optional Triboar moments, a random sighting each day, and two or three extra encounters from the DM toolkit.</td>
+<td>Nothing. Break after Scene 3, at the flame stone camp. Session two opens with Day 4.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Two shorter sessions of about 90 minutes:</strong> end the first after Scene 2, with the wolves gone and nobody able to sleep. Open the second with Day 3.</p>
+<p><strong>Three dials you can turn at any moment</strong></p>
+<ul>
+<li><strong>More talk:</strong> add a campfire question or a crew moment from the toolkit.</li>
+<li><strong>More action:</strong> drop in an extra encounter from the toolkit.</li>
+<li><strong>More speed:</strong> say "The hours pass. Then..." and read the next scene's opening.</li>
+</ul>
+<h3>📋 Caravan tracker</h3>
+<p>Put this on an index card where players can see it. It is the goal of the adventure.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Count</th>
+<th>Pay on delivery (whole group)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The bell</td>
+<td>1</td>
+<td>50 gp</td>
+</tr>
+<tr>
+<td>Wagons of goods (wagons 2 and 3)</td>
+<td>2</td>
+<td>20 gp each</td>
+</tr>
+<tr>
+<td>Oxen</td>
+<td>6</td>
+<td>5 gp each</td>
+</tr>
+<tr>
+<td>Crew alive and well</td>
+<td>3</td>
+<td>Bessa's goodwill, which matters in Part 2</td>
+</tr>
+</tbody>
+</table></div>
+<p>Maximum pay is 120 gp. A wagon needs at least one ox to move. One ox pulls at half speed.</p>
+<h3>⏳ Delays</h3>
+<p>The bell is due at the Stonehill Inn in Phandalin by noon on the tenth day. Draw a row of eight <strong>delay boxes</strong> on the tracker card. Each marked box is half a day lost and takes <strong>5 gp</strong> off the final pay. The same row carries on into Part 2.</p>
+<p>Say it out loud every time you mark a box. Bessa does: "Late is a kind of lost."</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Cause in Part 1</th>
+<th>Boxes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A wagon is down to one ox at the end of Scene 2 or Scene 4. Count each wagon once.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Wagon 1 is wrecked in Scene 4 and the bell has to be reloaded</td>
+<td>1</td>
+</tr>
+<tr>
+<td>The storm clock reaches tick 4 in Scene 5</td>
+<td>1</td>
+</tr>
+<tr>
+<td>The stuck wheel (random sighting 7) is not freed</td>
+<td>1</td>
+</tr>
+<tr>
+<td>The party insists on a long detour or an extra rest day</td>
+<td>2</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>⏪ Winning time back.</strong> Once per part, the party can force-march through a midday rest. Each character makes a <span class="dc">DC 10</span> Constitution saving throw, and on a failure has 1 Exhaustion level until their next Long Rest. Erase one box.</p>
+<h3>⚖️ Scaling</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Players</th>
+<th>Wolves in Scene 2</th>
+<th>Storm actions in Scene 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody>
+</table></div>
+<p>Monster names in bold use the standard Monster Manual stat block of that name.</p>
+<h3>📊 Monster quick stats</h3>
+<p>These are the numbers you need at the table, from the 2024 rules. The full stat blocks are in the Monster Manual.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Creature</th>
+<th>Used in</th>
+<th>AC</th>
+<th>HP</th>
+<th>Speed</th>
+<th>Attack</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.aidedd.org/monster/wolf">Wolf</a></td>
+<td>Scene 2</td>
+<td>12</td>
+<td>11</td>
+<td>40 ft.</td>
+<td>Bite: +4 to hit, 5 (1d6 + 2) piercing</td>
+<td>A Medium or smaller target that is hit is knocked Prone. Pack Tactics: Advantage on attacks when an ally is next to the target.</td>
+</tr>
+<tr>
+<td>Ox</td>
+<td>Whole adventure</td>
+<td>10</td>
+<td>15</td>
+<td>30 ft.</td>
+<td>None</td>
+<td>Invented for this adventure. An ox never attacks.</td>
+</tr>
+<tr>
+<td><a href="https://www.aidedd.org/monster/guard">Guard</a> (Sergeant Kane)</td>
+<td>Scene 3</td>
+<td>16</td>
+<td>11</td>
+<td>30 ft.</td>
+<td>Spear: +3 to hit, 4 (1d6 + 1) piercing, thrown 20/60 ft.</td>
+<td>Passive Perception 12. She should never need to fight.</td>
+</tr>
+<tr>
+<td><a href="https://www.aidedd.org/monster/goblin-minion">Goblin Minion</a></td>
+<td>Toolkit: the goblin market</td>
+<td>12</td>
+<td>7</td>
+<td>30 ft.</td>
+<td>Dagger: see the book</td>
+<td>Can Disengage or Hide as a Bonus Action. The stronger Goblin Warrior has AC 15 and 10 HP.</td>
+</tr>
+<tr>
+<td><a href="https://www.aidedd.org/monster/stirge">Stirge</a></td>
+<td>Toolkit: stirges at the tower</td>
+<td>13</td>
+<td>5</td>
+<td>Fly 40 ft.</td>
+<td>Proboscis: see the book for the attack roll</td>
+<td>On a hit it attaches and drains 5 (2d4) at the start of each of its turns. Anyone next to it can pull it off with an action.</td>
+</tr>
+<tr>
+<td>Crew (Bessa, Grett, Odo)</td>
+<td>Whole adventure</td>
+<td>10</td>
+<td>4</td>
+<td>30 ft.</td>
+<td>None worth rolling</td>
+<td>Use the Commoner stat block. These numbers are from memory, so check your book.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How many wolves:</strong> three for 4 players, four for 5 players, five for 6 players.</p>
+<h3>🌱 Three notes for a first-time DM</h3>
+<ol>
+<li>When unsure of a DC, use 12. If the idea is clever, skip the roll.</li>
+<li>Keep the tracker card visible at all times. It shows the players the stakes so you do not have to explain them.</li>
+<li>If a character drops to 0 hit points in Scene 2, a wolf drags an ox away instead of finishing them. The loss should fall on the caravan, not on a new player's first character.</li>
+</ol><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="cast"><h2>👥 Cast</h2><p>Three crew, six oxen and one bell travel with the party. Use the <strong>Commoner</strong> stat block for crew if you need one.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Who</th>
+<th>Role</th>
+<th>How to play them</th>
+<th>Quote</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bessa Quillon</td>
+<td>Halfling caravan master, drives wagon 1 (the bell)</td>
+<td>Thirty years on the trail. Calm, exact, keeps a log of everything, including insults.</td>
+<td>"Trail log, day one. Guards acquired. Quality to be determined."</td>
+</tr>
+<tr>
+<td>Grett Ironbrace</td>
+<td>Old dwarf, drives wagon 2 (food and water)</td>
+<td>Pessimist. Bets on how things will go wrong. Reads Dwarvish and knows the old waystones.</td>
+<td>"I'm a drover, not a wheelwright."</td>
+</tr>
+<tr>
+<td>Odo</td>
+<td>Young human, drives wagon 3 (wine and tea for the Stonehill Inn, plus lamp oil)</td>
+<td>First trip. Wears a red scarf. Asks the adventurers endless questions. Named all the oxen.</td>
+<td>"Have you ever fought a dragon? A small one? A picture of one?"</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The oxen:</strong> Duty, Honour, Gravy, Tuesday, Kevin and Lord Neverember. If an ox is attacked, treat it as AC 10 with 15 hit points and no attacks.</p>
+<p><strong>The bell:</strong> four feet tall, about 600 pounds, cast by a Triboar bell-founder for Phandalin's Shrine of Luck. It is made in the Shou style of far Kara-Tur: there is no clapper inside, and it is struck from outside by a wooden beam hung on ropes. It rides in a timber frame on wagon 1, and the beam knocks it whenever the wagon jolts. It can be heard a mile away. It cannot be destroyed by anything in this adventure. It can only be left behind.</p>
+<p><strong>Waiting in Phandalin:</strong> Toblen Stonehill, keeper of the Stonehill Inn, pays on delivery. Townmaster Harbin Wester ordered the bell, but nobody has seen him outside his house in weeks, so he left the purse with Toblen. The wine on wagon 3 is Toblen's own order. The townmaster's job board is the start of Dragon of Icespire Peak, so the hand-off is built in.</p><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="how-to-run-a-travel-day"><h2>🥾 How to run a travel day</h2><p>Every day on the trail follows the same five beats, and each takes about one minute. The day sections below give you words for each beat. Read them slowly, or put them in your own words.</p>
+<ol>
+<li><strong>Morning.</strong> Say how the camp wakes and what has changed since yesterday.</li>
+<li><strong>On the road.</strong> Describe the land. Say that hours pass. No rolls are needed to travel.</li>
+<li><strong>Sighting.</strong> One thing worth looking at. Each day has a fixed one. Add a random one if the table wants more.</li>
+<li><strong>One question.</strong> Ask one player what their character does during the walk. Take one answer, react to it, move on.</li>
+<li><strong>Camp.</strong> Describe the stop, the waystone, the fire. Ask who takes which watch.</li>
+</ol>
+<p><strong>If players want to leave the trail:</strong> let them. Scouts can walk an hour out and back, and you describe what they find. The wagons keep rolling, and Bessa will not wait past dusk.</p>
+<p><strong>Where the scenes fall</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Daytime</th>
+<th>Night</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Leaving Triboar, first camp</td>
+<td>Quiet</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The sea of grass</td>
+<td>Scene 2: Night watch</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The wind changes</td>
+<td>Scene 3: The eastbound caravan</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Frost, then Scene 4 and Scene 5</td>
+<td>Inside the shelter</td>
+</tr>
+</tbody>
+</table></div>
+<h3>🎲 Random sightings</h3>
+<p>Roll a d8 or pick one when a day feels thin. None of these is a fight. Each has a small payoff if someone goes to look.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>d8</th>
+<th>What they see</th>
+<th>If someone investigates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A stone chimney standing alone in the grass, with no house around it.</td>
+<td>A rusted kettle still hangs in the hearth. Under a loose stone are 2 sp and a child's wooden horse.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Hawks circling something a mile north.</td>
+<td>A dead elk, torn open from above. The claw marks are wider than a hand.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A peddler pushing a handcart east. He does not stop walking.</td>
+<td>He shouts prices as he passes. He will sell one item from the basic gear list, at the run.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Rusted helmets and spearheads in the grass.</td>
+<td>Intelligence (History) <span class="dc">DC 10</span>: orcs and dwarves fought here centuries ago. One dwarven dagger is still sharp.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Wild ponies run alongside the wagons for a mile, then swing away.</td>
+<td>Wisdom (Animal Handling) <span class="dc">DC 12</span>: one comes close enough to touch. Odo talks about it for two days.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>A wall of rain crosses the plain like a curtain being drawn.</td>
+<td>It hits for ten minutes. Then there is a rainbow, and everything smells of wet ox.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>A wagon wheel drops into a rut and sticks.</td>
+<td>Strength (Athletics) <span class="dc">DC 10</span> to free it. On a failure it takes an hour and Grett wins a bet.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>A thread of smoke, far to the north.</td>
+<td>A cold campfire and large bare footprints. Someone was watching the trail.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>🪨 The waystones</h3>
+<p>The party passes one carved dwarven stone each day. They are the clues for the Scene 5 puzzle. Mention each one plainly and do not tell the players they matter.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Picture</th>
+<th>Notches</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Boot</td>
+<td>One</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tankard</td>
+<td>Two</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Flame</td>
+<td>Three</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The door in Scene 5</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>If a player asks, Grett says the dwarves set them a day's march apart. "Each one tells you what to do when you get there. Dwarves like instructions."</p><a class="top" href="#top">↑ Back to contents</a></section>
+<div class="group">🛤️ The adventure</div>
+<section id="scene-1-hired-in-triboar"><h2>🎭 Scene 1: Hired in Triboar</h2><span class="badge">Roleplay</span><p>The party meets the crew, sees the cargo and learns the job. Aim to be on the road within 20 minutes.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Triboar is a town built where roads cross, and it smells of horses and other people's plans. In a wagon yard on the west side, three ox-wagons stand loaded. On the first, under canvas, something large and bronze catches the morning light. A halfling with a ledger looks you over as if you were also cargo.</p>
+</blockquote>
+<p><strong>👣 Step 1. Introductions.</strong> Bessa asks each character one question: "Name, trade, and why you want to walk for ten days." Each player answers in a sentence or two. She writes it all down.</p>
+<p>Bessa reacts to every answer. Pick the nearest line:</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>If the character says they want...</th>
+<th>Bessa says</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Money</td>
+<td>"Honest. I can work with honest."</td>
+</tr>
+<tr>
+<td>Glory or adventure</td>
+<td>"Glory. Noted. It weighs nothing and you can't eat it."</td>
+</tr>
+<tr>
+<td>To get away from something</td>
+<td>"Will it follow us? No? Then it's not my business."</td>
+</tr>
+<tr>
+<td>To help people</td>
+<td>"We'll see how that holds up on day six."</td>
+</tr>
+<tr>
+<td>They don't know</td>
+<td>"Most don't. Walk anyway. It comes to you."</td>
+</tr>
+</tbody>
+</table></div>
+<p>Then she introduces the crew:</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>"That's Grett. He'll tell you everything that's going to go wrong, and he's right about half of it, which is the annoying part. The one waving is Odo. It's his first trip. Don't tell him anything you don't want repeated to an ox."</p>
+</blockquote>
+<p><strong>👣 Step 2. The job.</strong> Bessa tells them:</p>
+<ul>
+<li>Ten days west along the Triboar Trail to Phandalin.</li>
+<li>Guard the caravan and keep the bell, the goods, the oxen and the crew in one piece.</li>
+<li>Pay is on delivery, at the Stonehill Inn, and depends on what arrives and when. The bell is due by noon on the tenth day, and every half day late costs 5 gp. Show the tracker card now.</li>
+<li>Two night watches, every night. Guards do not sleep through their watch. "It's in the log if you do."</li>
+</ul>
+<p><strong>The job in Bessa's words</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>"Ten days west. Three wagons, six oxen, one bell. You walk, you watch, and if something wants what we're carrying, you make it want something else. You're paid in Phandalin, at the Stonehill Inn, for what arrives and when it arrives. Not for what sets out. Not for when you meant to get there. Questions."</p>
+</blockquote>
+<p><strong>Questions players usually ask</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Bessa's answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>How dangerous is it?</td>
+<td>"Used to be wolves and weather. This season, two caravans came back short. So I'm hiring guards, which I don't enjoy paying for."</td>
+</tr>
+<tr>
+<td>Why does a small town need a big bell?</td>
+<td>"Ask them. I carry things. I don't wonder about them. It's restful."</td>
+</tr>
+<tr>
+<td>Can we ride on the wagons?</td>
+<td>"The oxen pull cargo. You're not cargo. Yet."</td>
+</tr>
+<tr>
+<td>Who feeds us?</td>
+<td>"Grett cooks. You eat what the crew eats. It's better than you'd think."</td>
+</tr>
+<tr>
+<td>Can we have pay in advance?</td>
+<td>Charisma (Persuasion) <span class="dc">DC 12</span>: she advances 2 gp each and logs it. On a failure: "Advance is what you do on the trail."</td>
+</tr>
+<tr>
+<td>What if we lose something?</td>
+<td>She taps the tracker card. "Then it's not on the card, and it's not in your purse."</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>👣 Step 3. The bell.</strong> If asked, she pulls back the canvas. The rim carries the words <em>Fortune favours the bold</em>. Underneath, someone has scratched <em>and the punctual</em>. Bessa does not comment.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The bell is the colour of dark honey and taller than the halfling showing it to you. It hangs in a frame of new timber, and even standing still it seems to hum. A big man in a scorched leather apron is polishing a spot that is already clean.</p>
+</blockquote>
+<p>This is Tolliver Brask, the bell-founder. He has one thing to say, and he says it to each character in turn: "She's the best thing I ever made. If you drop her, I will know."</p>
+<p>Beside him stands the woman who taught him the method: Master Liang Shu, small, straight-backed, from Shou Lung by way of every port in between. She bows to the bell, not to the party.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>"It has no tongue. A bell with a tongue chatters all day. This one speaks only when it is struck, and then people listen." She ties a strip of red paper to the frame. "For the road. Do not read it. It is not addressed to you."</p>
+</blockquote>
+<p><strong>🧧 Liang's blessing.</strong> Once in the whole adventure, any one player may reroll a d20 and say the red paper fluttered. After that it is just paper.</p>
+<p><strong>👣 Step 4. Supplies.</strong> The party has one hour to shop. Standard gear is available at book prices. Grett rubs his knee and says it means snow. Nobody believes him, since it is a warm autumn day.</p>
+<ul>
+<li>Cold-weather clothing costs 5 gp a set. It gives Advantage on the saving throws in Scenes 4 and 5.</li>
+<li>Wool blankets cost 5 sp each. One blanket can protect one ox in Scene 4.</li>
+</ul>
+<p><strong>🛒 Useful things to buy.</strong> If players ask what they might need, Grett offers opinions. Everything here pays off somewhere in the adventure.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Price</th>
+<th>Where it helps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cold-weather clothing</td>
+<td>5 gp</td>
+<td>Advantage on saving throws in Scenes 4 and 5.</td>
+</tr>
+<tr>
+<td>Wool blanket</td>
+<td>5 sp</td>
+<td>Saves one ox pair in Scene 4, no roll.</td>
+</tr>
+<tr>
+<td>Rope, 50 feet</td>
+<td>1 gp</td>
+<td>Advantage on any check to lash down a wagon in Scene 4.</td>
+</tr>
+<tr>
+<td>Flask of oil</td>
+<td>1 sp</td>
+<td>Thrown on the fire, it scares off the wolves in Scene 2.</td>
+</tr>
+<tr>
+<td>Healer's kit</td>
+<td>5 gp</td>
+<td>Stabilises a fallen character without a check.</td>
+</tr>
+<tr>
+<td>Ink, pen and paper</td>
+<td>About 10 gp, or 1 sp for chalk and a slate</td>
+<td>For players who like to take notes. Do not say why this matters.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The shopkeeper is a brisk gnome named Pim. "Going west? In this? I'll give you a fair price, since I won't be seeing you again. That was a joke. Mostly."</p>
+<p><strong>Checks</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wisdom (Insight) <span class="dc">DC 12</span></td>
+<td>Bessa is more worried than she shows. The last two caravans from the west came back short of animals.</td>
+</tr>
+<tr>
+<td>Intelligence (History) <span class="dc">DC 10</span></td>
+<td>The Triboar Trail is old. Dwarves marked it with carved waystones long before humans used it.</td>
+</tr>
+<tr>
+<td>Talking to Odo, no roll</td>
+<td>People in the yard say something big and white has been seen over the mountains. Odo thinks this is the best news he has ever heard.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>➕ Optional Triboar moments</h3>
+<p>Use these in the long version, or pick one if the table is enjoying the town. Each takes about ten minutes.</p>
+<p><strong>Loading the bell.</strong> The bell is still on the foundry hoist and has to be lowered onto wagon 1. This teaches skill checks with nothing at stake but pride.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The bell hangs from a chain over the wagon bed, turning slowly. Tolliver is on the winch and cannot watch. "Somebody guide her down. Somebody hold that ox. And somebody tell me when to stop."</p>
+</blockquote>
+<ul>
+<li>Three jobs, three checks at <span class="dc">DC 10</span>: Strength (Athletics) to steady the bell, Wisdom (Animal Handling) to keep the oxen still, Wisdom (Perception) to call the drop.</li>
+<li>All succeed: it settles without a sound. Tolliver wipes his eyes and denies it.</li>
+<li>Any fail: the bell swings, rings, and every dog in Triboar starts barking. Nothing is damaged. Bessa makes her first log entry of the trip.</li>
+</ul>
+<p><strong>The other crew.</strong> Four hired guards who did not get this job are drinking outside the yard. Their leader is a loud woman called Marda Voss.</p>
+<ul>
+<li>She offers a bet of 5 gp that the party will not get the bell past the fourth day.</li>
+<li>She can be beaten at arm-wrestling with an opposed Strength (Athletics) check. Her bonus is +4.</li>
+<li>She can be out-talked with Charisma (Persuasion or Intimidation) <span class="dc">DC 13</span>.</li>
+<li>If the party is friendly, she says why she wanted the job: "Because the last crew that went west didn't come back to brag about it."</li>
+</ul>
+<p><strong>A letter to carry.</strong> As the wagons are about to leave, a baker runs up with flour on her arms and presses a sealed letter on whichever character seems kindest.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>"You're for Phandalin? My sister's there. She hasn't written since midsummer. Just put it in her hand. Tell her Nan says the oven's fixed."</p>
+</blockquote>
+<p>This gives one player a personal errand in Phandalin and a reason to stay a while when they arrive.</p>
+<p><strong>Leaving.</strong> When the players are ready, go straight to Day 1.</p><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="day-1-leaving-triboar"><h2>🥾 Day 1: Leaving Triboar</h2><span class="badge">Travel</span><p>The first day is safe. Its job is to teach the routine of walking, camping and keeping watch, and to let the players feel the town fall away behind them.</p>
+<p><strong>🌅 Setting off.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Bessa does not give a speech. She clicks her tongue, the lead oxen lean into the yoke, and three wagons start to roll. On the first bump the bell rings once, loud and clear, and every head in the yard turns. Two children run alongside as far as the last house. Then Triboar is behind you, and the Triboar Trail is in front.</p>
+</blockquote>
+<p>Tell the players where they are walking: front, back, or beside a wagon. This is their marching order. Note it down.</p>
+<p><strong>👁️ The garlands.</strong> At the yard gate, a spice-seller the whole town calls Auntie Devi hangs a garland of marigolds round the neck of each ox. "For the road. No charge. You can pay me when you come back, so come back."</p>
+<p>Use the garlands as a free clock. Mention them once a day: bright orange on day one, wilting on day two, brown on day three, and frozen stiff on the morning of day four. Odo refuses to take them off.</p>
+<p><strong>🛤️ On the road.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The morning is farms. Stone walls, stubble fields, a dog that barks at the oxen from a safe distance. A farmer leans on a gate and sells apples from a basket, two for a copper. By noon the walls stop. By mid-afternoon the last farmhouse is a dot behind you. After that there is grass, and sky, and the trail between them like a line someone drew and then forgot about.</p>
+</blockquote>
+<p>Say it plainly: "You walk for eight hours. The oxen set the pace, and it is not fast. You could walk away from the trail in any direction and see nothing different for a day."</p>
+<p><strong>👁️ Sighting: the last signpost.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>A wooden post leans at the edge of the farmland. One arm points back: TRIBOAR. The other points ahead. Whatever it once said has been worn away. Someone has carved underneath: <em>further than you think.</em></p>
+</blockquote>
+<p><strong>👥 Crew moment.</strong> Odo falls in beside whichever character looks most dangerous and asks three questions in a row. Pick from these: "Is that sword heavy?" "Have you ever been cursed?" "What's the biggest thing you've fought? Was it bigger than an ox?"</p>
+<p><strong>❓ One question.</strong> Ask a player: "It's the first day and your feet don't hurt yet. What is your character doing as they walk?"</p>
+<p><strong>🏕️ Making camp.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Near sunset the trail passes a weathered stone, waist high, carved with a boot. There is a single notch cut into the top. Bessa calls the halt here. The wagons pull into a rough triangle, the oxen are tethered on the inside, and Grett has a fire going before you have your pack off.</p>
+</blockquote>
+<p>Bessa explains the routine once. Read it as a list, because she does:</p>
+<ul>
+<li>"Wagons in a triangle. Oxen inside it. Fire at the open corner."</li>
+<li>"Two watches. First until the moon is high, second until dawn. Two guards on each."</li>
+<li>"If something comes, shout first, fight second. I'd rather be woken for nothing."</li>
+</ul>
+<p>Ask the players to choose their two watches now. They keep this order for the whole trip unless they change it.</p>
+<p><strong>🏕️ Campfire.</strong> Supper is Grett's stew, and it is good. Bessa asks the group one question and writes down the answers: "What's the furthest any of you has been from home?" Let each player answer in a sentence.</p>
+<p><strong>🏕️ Night.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The first watch is quiet. There are more stars than you have ever seen from inside a town. On second watch, a streak of light crosses the sky and goes out somewhere over the south-west. Nothing else happens. This will be the last night you can say that.</p>
+</blockquote><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="day-2-the-sea-of-grass"><h2>🥾 Day 2: The sea of grass</h2><span class="badge">Travel</span><p>The land opens up fully today, and by evening something is following the caravan. The day ends with Scene 2.</p>
+<p><strong>🌅 Morning.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>You wake damp with dew and stiff from the ground. Odo is making porridge and has already burnt it. The oxen stand steaming in the cold air and do not want to move. Bessa moves them anyway. "Trail log, day two. Nobody deserted. Promising."</p>
+</blockquote>
+<p><strong>🛤️ On the road.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>There is nothing to measure distance against any more. The grass comes up to your waist and runs to the horizon on every side, rolling in the wind like water. Far to the north a dark line sits on the edge of the world. Grett says it is the Neverwinter Wood. You walk toward it all morning and it does not get any closer.</p>
+</blockquote>
+<p><strong>👁️ Sighting: the great herd.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Around noon the southern horizon starts to move. It takes you a while to understand that you are looking at animals. Shaggy wild cattle, thousands of them, are crossing from west to east. They take an hour to pass. You never hear them. They are too far away.</p>
+</blockquote>
+<ul>
+<li>Intelligence (Nature) <span class="dc">DC 10</span>: herds like this graze the foothills at this time of year. They should not be this far out on the plain.</li>
+<li>Bessa logs it. "Wrong place for them." She does not say more.</li>
+</ul>
+<p><strong>🪨 The second waystone.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>A little after the herd, another carved stone. This one shows a tankard, with two notches on top. Odo asks, with real hope, whether that means there is an inn. Grett laughs for the first time on the trip.</p>
+</blockquote>
+<p><strong>👁️ Optional stop: the watchtower.</strong> Use this if you have five spare minutes.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Off the trail, on the only hill for miles, stands the stump of a stone tower. Half the stair is still there.</p>
+</blockquote>
+<ul>
+<li>It is a ten-minute walk, and the wagons do not wait. Characters who go must jog to catch up.</li>
+<li>From the top they see the trail running straight as a rule in both directions, and the caravan below, very small.</li>
+<li>Wisdom (Perception) <span class="dc">DC 12</span> from the top: a mile behind the wagons, the grass is moving against the wind in four or five places.</li>
+</ul>
+<p><strong>❓ One question.</strong> Ask a player: "The plain is bigger than anything you've seen. Does your character like it, or does it make them uneasy?"</p>
+<p><strong>🏕️ Camp.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Tonight's camp is beside a thin stream, the only water since morning. The wagons go into their triangle. But the oxen will not settle. They stand with their heads up, facing the way you came. There are no birds at the water. Grett puts extra wood on the fire without being asked.</p>
+</blockquote>
+<p>Ask: "Same watches as last night?" Then begin Scene 2 on second watch.</p><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="scene-2-night-watch"><h2>🐺 Scene 2: Night watch</h2><span class="badge">Fight</span><p>Hungry wolves come for the oxen on the second night. This is a short first fight that teaches the real goal: protect the caravan, not just yourself.</p>
+<p><strong>👀 Setup.</strong> Ask who takes first watch and who takes second. The wolves come on second watch.</p>
+<p><strong>👀 Second watch.</strong> Read this to the characters on watch, using their names.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The fire has burned down to red. The oxen were restless at dusk. Now they are completely still, which is somehow worse. The grass hisses in the wind. It is the coldest hour of the night, and you are the only ones awake.</p>
+</blockquote>
+<p>Ask each watcher: "What are you doing right now?" Let them answer. Then roll the detection below.</p>
+<p><strong>👀 Detection.</strong> Roll one Dexterity (Stealth) check for the wolves, with a +4 bonus. Compare it to the passive Perception of each character on watch.</p>
+<ul>
+<li>Any watcher beats it: they see eyes in the grass. The party gets one round to wake others and prepare before the wolves charge.</li>
+<li>Nobody beats it: the first sign is an ox bellowing. One ox takes a bite (7 damage) before initiative is rolled. Sleeping characters wake on their first turn and spend it standing up and grabbing weapons.</li>
+</ul>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The grass moves against the wind. Low grey shapes, ribs showing, spread out in a half-circle. They are not looking at you. They are looking at the oxen.</p>
+</blockquote>
+<p><strong>⚔️ Enemies.</strong> <strong>Wolves</strong>, three for 4 players, four for 5, five for 6. Their stats are in the overview under "Monster quick stats".</p>
+<p><strong>How the wolves behave</strong></p>
+<ol>
+<li>They attack oxen first. They attack a character only if that character stands between them and an ox, or has hurt them.</li>
+<li>They flee when half of them are down.</li>
+<li>They flee at once from big fire or sudden loud noise. Ringing the bell takes an action and sends every wolf running. So does lighting the lamp oil from wagon 3. Reward any idea like this without a roll.</li>
+</ol>
+<p><strong>🗺️ Battlefield.</strong> Three wagons in a line with a campfire at one end. Oxen are tethered on the far side, away from the fire. It is dark beyond 20 feet of the fire. Standing behind a wagon gives cover.</p>
+<p><strong>👥 The crew.</strong> Bessa and Grett stay with the wagons. Odo tries to help and gets in the way. If the fight is going too easily, a wolf goes for Odo, and a character has to choose between him and an ox.</p>
+<h3>🗣️ Sample words for the fight</h3>
+<p>Each round, name the ox that is in danger. Players protect "Tuesday" harder than they protect "an ox".</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Moment</th>
+<th>Say something like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The wolves charge</td>
+<td>"They come in low and silent, and split around you like water round a rock. They want what is behind you."</td>
+</tr>
+<tr>
+<td>A wolf bites an ox</td>
+<td>"Tuesday bellows and kicks. There is blood on her flank, and the whole team is heaving at the tether ropes."</td>
+</tr>
+<tr>
+<td>A character steps in the way</td>
+<td>"The wolf stops. It looks at the ox, then at you, and decides you are the problem."</td>
+</tr>
+<tr>
+<td>A character hits</td>
+<td>"You catch it across the shoulder. It yelps and skids, and for the first time it is looking at you and not the oxen."</td>
+</tr>
+<tr>
+<td>A character misses</td>
+<td>"It twists away, thin as a rope. You could count its ribs."</td>
+</tr>
+<tr>
+<td>A wolf goes down</td>
+<td>"It drops and does not get up. The others hesitate. You can see them counting."</td>
+</tr>
+<tr>
+<td>Someone rings the bell</td>
+<td>"The bell does not ring so much as explode. Every wolf flattens to the ground, and then they are gone, grey streaks in the grass. Bessa takes her hands off her ears. 'That is going in the log.'"</td>
+</tr>
+<tr>
+<td>The wolves flee</td>
+<td>"As suddenly as it began, it is over. One long howl, from further away than you would like. Then only wind."</td>
+</tr>
+<tr>
+<td>A character drops to 0 hit points</td>
+<td>"The wolf standing over you lifts its head, looks at the oxen, and leaves you for easier meat."</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Crew lines to shout during the fight</strong></p>
+<ul>
+<li>Bessa: "Guards! Left side! The oxen, not the wolves, the oxen!"</li>
+<li>Grett: "Two silver says the lad gets bitten."</li>
+<li>Odo: "I've got a ladle!"</li>
+</ul>
+<p><strong>Aftermath</strong></p>
+<ul>
+<li>Update the tracker for any ox lost.</li>
+<li>Wisdom (Survival) or Intelligence (Nature) <span class="dc">DC 10</span>: these are mountain wolves, a long way from home and half starved. Something pushed them out of the hills.</li>
+<li>If no ox was lost, Bessa nods once. "Trail log. Guards adequate." From Bessa this is high praise, and Grett pays Odo two coppers.</li>
+</ul>
+<p class="callout delay"><strong>⏳ Delay check.</strong> If any wagon is now down to one ox, mark one delay box for it. Bessa says the number out loud.</p>
+<p><strong>🏕️ The rest of the night.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Nobody goes back to sleep. Grett walks the oxen one at a time, running his hands down every leg. Bessa builds the fire high and writes. The dead wolves are lighter than they should be. Under the fur there is hardly anything there.</p>
+</blockquote>
+<p>If an ox died, add:</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>At first light Odo asks if they should bury it. Grett says you do not bury an ox. Odo starts piling stones anyway. After a while, Grett helps.</p>
+</blockquote><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="day-3-the-wind-changes"><h2>🥾 Day 3: The wind changes</h2><span class="badge">Travel</span><p>The mountains come into view and the mood turns. The day ends at the flame stone, where Scene 3 begins.</p>
+<p><strong>🌅 Morning.</strong> Adjust the first line to how the wolf fight went.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Nobody slept much after the wolves. Grett checks every ox twice, legs and all, muttering. Bessa writes for a long time. Odo has stopped asking questions, and then, over cold porridge, starts again: "Do wolves come back?"</p>
+</blockquote>
+<p>If a character answers Odo, let them. Whatever they say, he believes it completely.</p>
+<p><strong>🛤️ On the road.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The land begins to rise, so gently you only notice because the oxen do. By mid-morning there are mountains in the south-west, blue and far off. One peak stands above the rest, and it is white. The wind used to come from behind you. Now it comes from there, and it is cold.</p>
+</blockquote>
+<p>Tell the players: "That is the direction you are heading. It will be there every day from now on."</p>
+<p><strong>👁️ Sighting: the empty wagon.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>A wagon sits beside the trail with its shafts pointing at the sky. No animals. No people. The canvas flaps.</p>
+</blockquote>
+<ul>
+<li>Nothing attacks. Let them search.</li>
+<li>Intelligence (Investigation) <span class="dc">DC 10</span>: the harness straps were cut, not unbuckled. Someone took the animals in a hurry and left the cargo of roof slates.</li>
+<li>Wisdom (Survival) <span class="dc">DC 12</span>: the tracks are a week old. Large, heavy feet, and the animals were led west.</li>
+<li>Bessa knows the wagon. "That's Harl Benn's. Phandalin trader. He left Triboar ten days ahead of us with a load of roof slates. He's never late." She logs it and says nothing more.</li>
+</ul>
+<p><strong>🧾 Who is Harl Benn?</strong> He is a merchant from Phandalin, invented for this adventure, who set out on the same trail ten days before the party. Orcs took his wagon and his oxen. He is alive, and the party meets him in Part 2, chained to a desk at the orc toll gate and keeping their accounts. The empty wagon here is the first clue. The second is his brand on an ox skull on day six. Players do not need to solve anything yet. They only need to remember the name.</p>
+<p><strong>❓ One question.</strong> Ask a player: "The mountains are in sight now. What does your character think when they look at that white peak?"</p>
+<p><strong>🏕️ Camp.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Late afternoon brings the third waystone. This one is carved with a flame, three notches on top, and around it are a dozen old fire rings, some so old that grass has grown through the stones. People have camped here for a very long time. Odo is put in charge of the porridge.</p>
+</blockquote>
+<p>Let them start setting up camp. Then begin Scene 3: the smudge on the trail appears while the fire is being lit.</p><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="scene-3-the-eastbound-caravan"><h2>💬 Scene 3: The eastbound caravan</h2><span class="badge">Social</span><p>A small group heading the other way shares a camp, rumours and one hard request. There is no fight here unless the players start one.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Near sunset on the third day, a smudge on the trail ahead turns into two carts, a mule and nine tired people. They are heading east, away from where you are going. Their leader raises an empty hand. Bessa looks at you. "Your call, guards. Camp together or keep apart?"</p>
+</blockquote>
+<p><strong>Who they are.</strong> Three mining families leaving the hills around Phandalin, guarded by Sergeant Ysolde Kane (use <strong>Guard</strong>). Ysolde is formal and tired, and reports everything as if to a superior officer. Pell Varrow, an old prospector, does most of the talking.</p>
+<p><strong>First words.</strong> Use these when the two groups meet.</p>
+<ul>
+<li>Ysolde, standing straight: "Sergeant Ysolde Kane, escort. Nine civilians, two carts, one mule, condition poor. We request permission to share your fire."</li>
+<li>Pell, behind her: "What she means is, we've got turnips and nobody new to complain to."</li>
+<li>Bessa, quietly, to the party: "They look harmless. I've been wrong about that before. Your call."</li>
+</ul>
+<p><strong>If the party keeps apart:</strong> the night passes quietly. They learn only the first rumour, shouted across the trail.</p>
+<p><strong>🏕️ If they share a camp:</strong> each character who talks with the travellers may make one Charisma (Persuasion) check. Sharing food or helping with the mule gives Advantage. Give every rumour at or below the result.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Two fires become one. The turnips go into Grett's pot, and he pretends this is an imposition. The children will not go near the adventurers, but they cannot stop staring at the bell. Finally the smallest one asks, very seriously, whether she is allowed to ring it.</p>
+</blockquote>
+<p>Let a player answer the child. If the bell is rung, it is heard for a mile, the oxen complain, and every child in the camp is now the party's friend. Any character who said yes gets Advantage on their check below.</p>
+<p><strong>What the travellers ask in return.</strong> Use these to make it a conversation and not an interview.</p>
+<ul>
+<li>"Is Triboar safe? Is there work?"</li>
+<li>"That bell is for Phandalin? We never had a bell. We never needed one."</li>
+<li>"You're going <em>toward</em> it. On purpose. Why?"</li>
+</ul>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>DC</th>
+<th>Rumour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>A white dragon has moved into the mountains. Livestock is vanishing. That is why they left.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Orcs are coming down out of the high country, because the dragon took their hunting grounds. Someone has started charging a "toll" on the trail further west.</td>
+</tr>
+<tr>
+<td>13</td>
+<td>The fourth waystone is different. It has a stone door set into the hill behind it, with writing and rings that turn. Pell never got it open. "Dwarves. They'd put a lock on a puddle."</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Ysolde saw the dragon up close, once. "It did not look at us. I have decided to be grateful rather than offended." It hunts by day and hates being followed.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>How they say it</strong></p>
+<ul>
+<li><strong><span class="dc">DC 5</span>, Pell:</strong> "White. Big as a barn. Well, a small barn. It took my neighbour's cow off the hill the way you'd pick an apple. We didn't stay to find out what it wanted for afters."</li>
+<li><strong><span class="dc">DC 10</span>, Ysolde:</strong> "Report. Orc bands, moving down out of the high ground. Not raiding. Relocating. Something evicted them. There is now a gate across the trail, some days west of here. They call it a toll. I call it a robbery with paperwork."</li>
+<li><strong><span class="dc">DC 13</span>, Pell:</strong> "Fourth stone's got a door behind it. Rings that turn, little pictures, writing I can't read. I spent a whole wet afternoon on it once. Dwarves. They'd put a lock on a puddle."</li>
+<li><strong><span class="dc">DC 15</span>, Ysolde:</strong> she waits until the children are asleep. "I saw it close, once. It flew over the cart, low enough that I felt the cold come off it. It did not look at us. I have decided to be grateful rather than offended. It hunts in daylight. And it does not like to be followed."</li>
+</ul>
+<p><strong>The request.</strong> Their mule is lame and will not last to Triboar. Pell asks to buy an ox. He can pay 3 gp, which is less than the 5 gp the ox is worth on delivery.</p>
+<p><strong>How the request sounds</strong></p>
+<ul>
+<li>Pell, hat in his hands: "I'll not dress it up. The mule's finished. She won't see Triboar, and the little ones can't walk it. I've three gold and a letter that's worth more. I'm asking for an ox."</li>
+<li>
+<p>Bessa, before anyone answers: "Not mine to give. Every ox is coin in your pockets at the other end. Guards decide."</p>
+</li>
+<li>
+<p><strong>Yes:</strong> remove one ox from the tracker. Pell gives them a letter to Toblen Stonehill, innkeeper in Phandalin, good for a week of free rooms. Bessa logs it without expression.</p>
+</li>
+<li><strong>No:</strong> nothing bad happens. The families move on slower. Odo is quiet for a day.</li>
+</ul>
+<p><strong>If they say yes:</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Pell does not say thank you at first. He puts a hand flat on the ox's neck and stands there. Then he pushes a folded letter at you, a little too hard. "Stonehill Inn. Toblen owes me. Now he owes you." By morning the children have given the ox a new name, and it seems not to mind.</p>
+</blockquote>
+<p><strong>If they say no:</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Pell nods as if he had expected it. "Had to ask." He goes back to his own side of the fire. Nobody is angry. Somehow that is harder.</p>
+</blockquote>
+<p>There is no right answer here, so do not punish either choice.</p>
+<p><strong>🛒 Trade.</strong> Ysolde will sell two Potions of Healing at 50 gp each. A fair trade in goods also works.</p><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="day-4-frost"><h2>🥾 Day 4: Frost</h2><span class="badge">Travel</span><p>The signs build all day that something is wrong with the weather. Keep this day short and tense, because it runs straight into Scene 4.</p>
+<p><strong>🌅 Morning.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>You wake to white. Frost on the canvas, frost on the grass, frost in Grett's beard. Your breath smokes. It is not the season for it. The porridge is burnt, and this morning nobody complains, because it is hot.</p>
+</blockquote>
+<p>If the party camped with the eastbound families, they leave now. Sergeant Kane salutes. "Good fortune on the trail. I mean that as a formal recommendation."</p>
+<p><strong>🛤️ On the road.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The white peak has not moved, but it is bigger. The puddles in the wheel ruts are skinned with ice that cracks under the oxen. Around mid-morning you notice what is missing. No birdsong. No insects. Only the wheels, the wind, and the bell knocking softly in its frame.</p>
+</blockquote>
+<p><strong>👁️ Sighting: the birds.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Then the birds come. Not a flock, but all of them. Geese, crows, hawks and small brown things, all flying together, high and fast, east. Away from the mountains. Hawks do not fly with geese.</p>
+</blockquote>
+<ul>
+<li>Intelligence (Nature) <span class="dc">DC 10</span>: animals flee like this ahead of a great storm, or a great predator.</li>
+<li>Any character who asks Grett for odds: "No bets today." He has never said that before.</li>
+</ul>
+<p><strong>❓ One question.</strong> Ask a player: "Bessa wants to push on without the midday rest. Does your character say anything, or just walk faster?"</p>
+<p><strong>Bessa pushes the pace.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>There is no midday stop. Bessa walks beside the lead oxen with her ledger shut, which you have not seen before. "Fourth stone by dark," she says. "There's shelter there, if the stories are right. Eat while you walk."</p>
+</blockquote>
+<p>Now begin Scene 4. The oxen stop on their own in the middle of the afternoon.</p><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="scene-4-the-white-dragon-and-the-ice-front"><h2>🐉 Scene 4: The white dragon and the ice front</h2><span class="badge">Spectacle · no fight</span><p>A dragon passes overhead and a freak ice storm follows it. The party has one action each to protect the caravan, and there are more things to save than actions. This is the centrepiece and there is no fight.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Afternoon, day four. The oxen stop first. All of them, at once, heads down. Then the light changes. Something crosses the sun: pale, long-winged, high up, flying toward the white peak with a dead elk in its claws as if it weighed nothing. It does not look down. Behind it, from the mountains, a grey-white wall is crossing the plain toward you faster than a horse can run.</p>
+</blockquote>
+<p>Grett, quietly: "Dragons don't make the weather. They just know where it's going to be terrible, and get there first."</p>
+<p>Then a frozen sheep lands in the grass beside wagon 2. Nobody ever explains the sheep.</p>
+<p><strong>The dragon cannot be fought or reached.</strong> It is a thousand feet up and gone in half a minute. If a character shoots at it, the arrow falls short and Bessa logs the attempt.</p>
+<p><strong>Quick checks before the storm (free, no action)</strong></p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Intelligence (Arcana or Nature) <span class="dc">DC 10</span></td>
+<td>A young white dragon. Small as dragons go. It could still kill everyone here in under a minute.</td>
+</tr>
+<tr>
+<td>Intelligence (Arcana or Nature) <span class="dc">DC 13</span></td>
+<td>White dragons hunt on instinct. It has its meal. It will not come back today.</td>
+</tr>
+<tr>
+<td>Wisdom (Survival) <span class="dc">DC 10</span></td>
+<td>The front hits in about one minute. Hail first, then killing cold. The character gets Advantage on their storm action.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>🎯 One action each</h3>
+<p>Bessa shouts orders and gets her own ox pair turned tail-to-wind. That leaves seven things at risk. Lay them out as cards or write them on the table.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>At risk</th>
+<th>If nobody protects it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wagon 1 (the bell)</td>
+<td>The frame cracks and the wagon is finished. The bell is unharmed but must ride on another wagon, whose goods are dumped.</td>
+</tr>
+<tr>
+<td>Wagon 2 (food and water)</td>
+<td>Barrels split. Part 2 starts with short rations.</td>
+</tr>
+<tr>
+<td>Wagon 3 (trade goods)</td>
+<td>Canvas torn off, wine jars smashed, tea soaked. No pay for this wagon.</td>
+</tr>
+<tr>
+<td>Ox pair 2</td>
+<td>One ox bolts into the storm. Remove it from the tracker.</td>
+</tr>
+<tr>
+<td>Ox pair 3</td>
+<td>One ox bolts into the storm. Remove it from the tracker.</td>
+</tr>
+<tr>
+<td>Grett</td>
+<td>Struck by hail and injured. He cannot drive in Part 2, so a character must.</td>
+</tr>
+<tr>
+<td>Odo</td>
+<td>He freezes in place staring at the sky and is injured the same way.</td>
+</tr>
+</tbody>
+</table></div>
+<p>Skip any ox pair already lost.</p>
+<p>Each player says what their character does to protect one thing, then rolls a suitable check against <strong><span class="dc">DC 12</span></strong>. A clever idea, a spell or the right gear succeeds with no roll. Examples to offer if players stall:</p>
+<ul>
+<li>Strength (Athletics): chock the wheels and lash the bell frame down.</li>
+<li>Wisdom (Animal Handling): turn an ox pair tail-to-wind and hold them.</li>
+<li>Wisdom (Survival): spot a dip in the ground and get a wagon into it.</li>
+<li>Charisma (Intimidation or Persuasion): snap Odo out of it and get him under a wagon.</li>
+<li>Wisdom (Medicine): get Grett's bad knee moving and into cover.</li>
+<li>Blankets bought in Triboar: over the oxen's heads, automatic success for one pair.</li>
+<li>Dexterity (Sleight of Hand) or any tool proficiency: double-tie the canvas on wagon 3.</li>
+</ul>
+<p>Two characters may work on the same thing. One rolls with Advantage, but that uses both actions.</p>
+<h3>🎯 Running it at the table</h3>
+<ol>
+<li>Read Bessa's orders: "Wheels chocked! Tails to the wind! Somebody get that boy under a wagon! You have one minute, guards. Pick something and save it!"</li>
+<li>Point at the seven things. Say: "You each have time for one thing. Only one. What do you save, and how?"</li>
+<li>Go round the table. For each player, name the check, let them roll, and narrate the result from the table below.</li>
+<li>Do not announce what was lost yet. Wait until everyone has acted, then read "The front hits".</li>
+</ol>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Thing</th>
+<th>On a success</th>
+<th>On a failure</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wagon 1 (the bell)</td>
+<td>"The last rope goes tight just as the wind arrives. The frame groans, and holds."</td>
+<td>"The knot is half tied when the first gust hits. You hear timber crack like a bone."</td>
+</tr>
+<tr>
+<td>Wagon 2 (food and water)</td>
+<td>"You get it nose-down in the hollow. The barrels shift, and stay."</td>
+<td>"A barrel hoop lets go with a bang. Then another."</td>
+</tr>
+<tr>
+<td>Wagon 3 (trade goods)</td>
+<td>"The canvas is drum-tight. The hail bounces off it like thrown gravel."</td>
+<td>"The canvas rips free and sails away east, flapping, after the birds."</td>
+</tr>
+<tr>
+<td>An ox pair</td>
+<td>"You haul their heads round. They lean into each other, shut their eyes, and stand."</td>
+<td>"The rope burns through your hands. One of them is gone into the white."</td>
+</tr>
+<tr>
+<td>Grett</td>
+<td>"'I can walk, I'm not dead.' He lets you carry him anyway."</td>
+<td>"You have his arm, and then the hail comes down between you and you do not."</td>
+</tr>
+<tr>
+<td>Odo</td>
+<td>"You grab him by the scarf. He blinks. 'Did you SEE that?' 'Under the wagon, Odo.'"</td>
+<td>"He is still looking up when the hail arrives."</td>
+</tr>
+</tbody>
+</table></div>
+<h3>🌨️ The front hits</h3>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Hail the size of sling stones. Then wind that takes the breath out of your mouth. For one long minute there is no caravan, no trail, no sky, only white noise and the bell, ringing and ringing somewhere to your left.</p>
+</blockquote>
+<ol>
+<li>Each character makes a <strong><span class="dc">DC 12</span> Constitution saving throw</strong>. On a failure they take 3 (1d6) cold damage. Cold-weather clothing gives Advantage.</li>
+<li>Resolve everything that was not protected, and update the tracker in front of the players.</li>
+<li>Bessa counts heads, then points west. "That was the front. The storm is behind it. There is a waystone shelter half a mile on. Move."</li>
+</ol>
+<p><strong>After the front.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>It lasts a minute. It feels much longer. Then the hail thins, the wind drops to merely vicious, and you can see again. The plain is white. Everything that faces west has half an inch of ice on it, including you.</p>
+</blockquote>
+<p>Go down the tracker card out loud, one line at a time. Sample lines for losses:</p>
+<ul>
+<li>A wagon: "Wagon three is still standing. What was in it is spread across a quarter mile of grass."</li>
+<li>An ox: "Where the third pair stood there is one ox and a snapped rope."</li>
+<li>A crew member: "Grett is sitting against a wheel with blood in his beard. 'Don't fuss. Count the oxen.'"</li>
+</ul>
+<p class="callout delay"><strong>⏳ Delay check.</strong> Mark one delay box for each wagon newly down to one ox, and one more if wagon 1 was wrecked. Bessa does the sum before the hail has finished melting. "That's ten gold we've spent standing here. Move."</p>
+<p><strong>🛤️ The half mile.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>Bessa is already moving. Half a mile takes a quarter of an hour. Each time you look back, the sky behind you is darker. It is not grey any more. It is nearly black, with a sick green edge, and it is closer. Then, ahead, a low hill, a cutting in its side, and a standing stone.</p>
+</blockquote><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="scene-5-the-waystone-shelter"><h2>🚪 Scene 5: The waystone shelter</h2><span class="badge">Timed puzzle</span><p>The party must open a dwarven puzzle door before the main storm arrives. The answer is boot, tankard, flame, and the door always opens in the end. The puzzle only decides what it costs.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The fourth waystone stands at the mouth of a cutting in a low hill. Behind it is a round stone door, taller than an ox. Three stone rings are set into it, one inside the other, each carved with six pictures. Above the rings is a line of angular writing. Behind you, the sky is the colour of a bruise.</p>
+</blockquote>
+<h3>🚪 The door</h3>
+<ul>
+<li>Three rings. The outer ring has one notch above it, the middle ring two, the inner ring three.</li>
+<li>Each ring shows the same six pictures: <strong>boot, tankard, flame, hammer, beard, mountain</strong>.</li>
+<li>Each ring turns to bring one picture to the top. A lever at the side tries the lock.</li>
+<li>The writing is Dwarvish: <em>"One step. One drink. One fire. In that order. We are not animals."</em></li>
+</ul>
+<p class="callout solve"><strong>✅ Solution:</strong> outer ring to boot, middle ring to tankard, inner ring to flame. These are the three waystones the caravan passed, matched by their notches.</p>
+<h3>💡 Three ways to the answer</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Route</th>
+<th>How it works</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory</td>
+<td>Players who noted the waystones match picture to notch count.</td>
+</tr>
+<tr>
+<td>The inscription</td>
+<td>Anyone who reads Dwarvish can read it. Grett translates if asked. Step is the boot, drink is the tankard, fire is the flame.</td>
+</tr>
+<tr>
+<td>The crew</td>
+<td>Each crew member remembers one stone if asked. Odo: "The tankard was second, I asked about the inn." Bessa's log: "Day three, camped at the flame stone. Odo burnt the porridge." Grett: "First one was a boot. I stubbed my toe on it in the dark."</td>
+</tr>
+</tbody>
+</table></div>
+<h3>⏲️ The storm clock</h3>
+<p>Draw four boxes. Tick one box each time the party pulls the lever on a wrong answer, or fails an attempt to force the door. If the table argues for more than five real minutes without trying anything, tick a box.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Tick</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>The wind rises. Each character makes a <span class="dc">DC 10</span> Constitution saving throw or gains 1 Exhaustion level. Nobody goes above 1 in this scene.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Same saving throw. One surviving ox bolts, unless a character spends this round holding the team with a <span class="dc">DC 12</span> Wisdom (Animal Handling) check.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Same saving throw. The canvas on one wagon goes, and that wagon's goods are ruined.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Grett shoves past, mutters something rude in Dwarvish, sets the rings and pulls the lever. "Boot. Tankard. Flame. I was hoping one of you would get there." The door opens.</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Other approaches</strong></p>
+<ul>
+<li><strong>Force:</strong> three characters heave together, with one <span class="dc">DC 15</span> Strength (Athletics) check from the strongest. A success cracks the lock open. A failure ticks the clock.</li>
+<li><strong>Thieves' tools:</strong> <span class="dc">DC 15</span> Dexterity check. A success reveals by feel that the outer ring settles on the boot. A failure costs no tick.</li>
+<li><strong>Any other clever idea:</strong> if it sounds plausible, give them one ring's answer.</li>
+</ul>
+<h3>🗣️ Sample words at the door</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Moment</th>
+<th>Say something like</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A ring is turned</td>
+<td>"Stone grinds on stone. The picture drops into place with a click you feel in your teeth."</td>
+</tr>
+<tr>
+<td>The lever, wrong answer</td>
+<td>"Something heavy shifts inside the door, thinks about it, and settles back. Nothing."</td>
+</tr>
+<tr>
+<td>Tick 1</td>
+<td>"The wind climbs a note. Ice is forming on the oxen's backs."</td>
+</tr>
+<tr>
+<td>Tick 2</td>
+<td>"The hail is back. One of the oxen is fighting the yoke, eyes rolling white."</td>
+</tr>
+<tr>
+<td>Tick 3</td>
+<td>"You can no longer see the last wagon. Something back there tears, loudly."</td>
+</tr>
+<tr>
+<td>The lever, right answer</td>
+<td>"The lever drops. Deep in the hill, counterweights older than Triboar begin to move. The door rolls aside as smoothly as if it had been oiled yesterday."</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>👥 Hints from the crew.</strong> If the players are stuck, give one hint after each tick, unasked.</p>
+<ul>
+<li>After tick 1, Odo: "That's the tankard! Like the stone! The one with no inn!"</li>
+<li>After tick 2, Bessa, flipping pages with frozen fingers: "Day three. Flame stone. It's in the log. Everything is in the log."</li>
+<li>After tick 3, Grett, squinting at the writing: "'In that order,' it says. Order of what, I wonder. What have we walked past, three days running?"</li>
+</ul>
+<h3>🔥 Inside</h3>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The door rolls aside. Dry air, old smoke, and a room cut square and true into the rock, with stalls for animals along one wall and firewood stacked to the ceiling. A slate by the hearth reads: <em>Replace what you burn.</em></p>
+</blockquote>
+<ul>
+<li>The cutting shelters the wagons. The oxen fit in the stalls. Everyone can take a Long Rest, which removes the Exhaustion.</li>
+<li>A stone visitors' book holds three centuries of scratched entries. Most are complaints about the weather. The most recent is in Orcish and is not a complaint. It is a tally of caravans.</li>
+<li>A niche holds a travellers' cache: two Potions of Healing and 30 gp in old dwarven coin. Dwarven custom is to leave something in return. Bessa leaves a bag of nails and logs it.</li>
+<li>A map carved in the wall shows the trail running on west to a river with a bridge, and then to the hills around Phandalin.</li>
+</ul>
+<p><strong>🏕️ The evening inside.</strong></p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>The door rolls shut and the storm becomes a noise on the other side of a lot of rock. Someone gets the fire lit. The oxen steam in their stalls. For the first time since noon, nobody is shouting. Odo falls asleep sitting up, with a bowl still in his hands.</p>
+</blockquote>
+<ul>
+<li>Grett, looking round at the stonework: "Dwarves built this. Three hundred years, and the door still runs true. I'd like that noted."</li>
+<li>Bessa, without looking up: "Noted."</li>
+</ul>
+<p><strong>The visitors' book.</strong> If a character reads it, share a few entries. Grett translates the Dwarvish.</p>
+<ul>
+<li>"Rain."</li>
+<li>"Rain again. Door works."</li>
+<li>"Whoever took the good kettle: I know your clan."</li>
+<li>"Snow in high summer. Unacceptable."</li>
+<li>In Common, badly scratched: "Could not read the instructions. Got in anyway. Sorry about the firewood."</li>
+<li>The last entry is rows of tally marks under an Orcish glyph. Anyone who reads Orcish, or Grett after a long look, says: "Wagons. Counted going west." There is a second, shorter row. "And counted coming back."</li>
+</ul><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="wrap-up"><h2>🏁 Wrap-up</h2><p>End the session inside the shelter with the storm outside. Levelling up to 2 here is the DM's choice. The Part 2 overview shows how each option plays.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>"Trail log, day four. Dragon: one, distant. Storm: one, close. Sheep: one, unexplained. Guards: still here. Six days to Phandalin." Bessa closes the book. Outside, the wind tries the door and gives up.</p>
+</blockquote>
+<h3>🎒 Carry into Part 2</h3>
+<p>Fill this in before you pack up.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>State at end of Part 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oxen remaining (of 6)</td>
+<td></td>
+</tr>
+<tr>
+<td>Wagons still rolling (of 3)</td>
+<td></td>
+</tr>
+<tr>
+<td>Goods intact: wagon 2, wagon 3</td>
+<td></td>
+</tr>
+<tr>
+<td>Crew injured</td>
+<td></td>
+</tr>
+<tr>
+<td>Letter to Toblen Stonehill (yes or no)</td>
+<td></td>
+</tr>
+<tr>
+<td>Potions found or bought</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Also write down the number of delay boxes marked so far. They carry into Part 2.</p>
+<h3>➡️ What Part 2 will use</h3>
+<ul>
+<li>The bridge on the wall map is out, and the river is in flood from the storm. That is a crossing puzzle with a limit on trips, and oxen are the easiest way to pull the ferry.</li>
+<li>The Orcish tally in the visitors' book leads to the toll gate: pay, fight, bluff or go around.</li>
+<li>Any ox that bolted may turn up again, in someone else's hands.</li>
+<li>The party arrives in Phandalin, rings the bell and is paid at the Stonehill Inn, less 5 gp for every delay box.</li>
+</ul><a class="top" href="#top">↑ Back to contents</a></section>
+<div class="group">🧰 Reference</div>
+<section id="dm-toolkit"><h2>🧰 DM toolkit</h2><p>Everything in this section is optional. Use it to stretch the adventure, fill a quiet moment, or get unstuck.</p>
+<h3>👀 Reading the table</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>If the players are...</th>
+<th>Do this</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Restless or checking phones</td>
+<td>Say "The hours pass. Then..." and read the next scene's opening.</td>
+</tr>
+<tr>
+<td>Enjoying the talk</td>
+<td>Add a campfire question or a crew moment. Let it run.</td>
+</tr>
+<tr>
+<td>Wanting a fight</td>
+<td>Drop in an extra encounter marked "fight" below.</td>
+</tr>
+<tr>
+<td>Stuck on what to do</td>
+<td>Have a crew member make a suggestion. Bessa gives orders, Odo asks a useful question, Grett predicts the worst.</td>
+</tr>
+<tr>
+<td>Too cautious to act</td>
+<td>Bessa: "I'm not paying you to be careful. I'm paying you to be between me and it."</td>
+</tr>
+<tr>
+<td>Dominated by one voice</td>
+<td>Aim the day's "one question" at the quietest player.</td>
+</tr>
+<tr>
+<td>Trying to leave the trail for good</td>
+<td>Let them walk an hour. Describe the same grass. Then describe the wagons getting smaller.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>⚡ Quick rulings</h3>
+<ul>
+<li><strong>Setting a DC:</strong> easy 10, normal 12, hard 15. If you cannot decide, it is 12.</li>
+<li><strong>Good idea, good description or help from a friend:</strong> give Advantage, or skip the roll.</li>
+<li><strong>Improvised damage at level 1:</strong> a knock is 1d4, a real injury is 1d6. Do not go higher.</li>
+<li><strong>You do not know the rule:</strong> make a call, say "we'll check it after", and keep going.</li>
+<li><strong>A player wants to try something odd:</strong> say yes, name a check, and let the dice decide how well it goes.</li>
+</ul>
+<h3>🎪 Extra encounters</h3>
+<p>Each takes 10 to 20 minutes. None is needed for the story.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Encounter</th>
+<th>When</th>
+<th>Type</th>
+<th>How it runs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The camp thief</td>
+<td>Night 1</td>
+<td>Roleplay</td>
+<td>Something is in the food wagon. It is a thin stray dog. If fed, it follows the caravan. In Scene 2 it barks before the wolves arrive, so nobody is surprised. The players will name it.</td>
+</tr>
+<tr>
+<td>The cistern</td>
+<td>Day 1 or 2</td>
+<td>Rescue</td>
+<td>The ground gives way under Odo. He is ten feet down in an old dwarven cistern, unhurt and delighted. A rope and a <span class="dc">DC 10</span> Strength (Athletics) check gets him out. On the cistern wall is a carving: a boot, a tankard and a flame, in a row.</td>
+</tr>
+<tr>
+<td>The goblin market</td>
+<td>Day 2 or 3</td>
+<td>Roleplay or fight</td>
+<td>Three <strong>Goblins</strong> sit by the trail behind a blanket of stolen odds and ends. Orcs pushed them out of the hills and they would rather sell than fight. One item is a harness buckle stamped H.B. They fight only if attacked, and run when one falls.</td>
+</tr>
+<tr>
+<td>Stirges at the tower</td>
+<td>Day 2</td>
+<td>Fight</td>
+<td>The ruined watchtower is a nest. Use one <strong>Stirge</strong> per player. They attack whoever climbs the stair.</td>
+</tr>
+<tr>
+<td>The ghost drover</td>
+<td>Night 3</td>
+<td>Strange</td>
+<td>At midnight a pale ox-driver walks the trail with no oxen. He asks whoever is on watch: "Is it far to Triboar?" He cannot be harmed and harms nobody. If answered kindly, he points at a spot by the flame stone. A foot down is a rotted purse with 10 gp.</td>
+</tr>
+<tr>
+<td>The ford</td>
+<td>Any day</td>
+<td>Problem</td>
+<td>A stream has cut the trail. Each wagon needs a <span class="dc">DC 10</span> group effort to cross. A failure soaks one character and costs an hour, and nothing worse.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>🔥 Campfire questions</h3>
+<p>Bessa, Grett or Odo asks one each night. Roll a d6 or choose.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>d6</th>
+<th>Question</th>
+<th>Who asks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"What's the best meal you ever ate?"</td>
+<td>Grett, stirring the pot</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"Who taught you to fight?" Or to cast, or to pray.</td>
+<td>Odo</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"What will you do with your pay?"</td>
+<td>Bessa, pen ready</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"What's the stupidest thing you've done for money?"</td>
+<td>Grett</td>
+</tr>
+<tr>
+<td>5</td>
+<td>"Is there anyone who'd come looking if you didn't come back?"</td>
+<td>Bessa. "It's for the log."</td>
+</tr>
+<tr>
+<td>6</td>
+<td>"If you could name an ox, what would you call it?"</td>
+<td>Odo, completely serious</td>
+</tr>
+</tbody>
+</table></div>
+<h3>🗣️ Crew lines for quiet moments</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>d6</th>
+<th>Line</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Odo: "Grett says the white mountain is where winter lives in the summer. Is that true?"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Grett: "Three coppers says it rains before noon." It does not. He pays up without a word.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bessa: "Trail log. Guard asked a sensible question. Underlined."</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Odo, to an ox: "No, Kevin. We talked about this."</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Grett: "I've walked this trail forty times. It's never once been shorter."</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Bessa, to nobody: "Thirty years. Not one cargo lost." A pause. "Not one that was my fault."</td>
+</tr>
+</tbody>
+</table></div>
+<h3>🏷️ Names on demand</h3>
+<ul>
+<li><strong>Travellers:</strong> Harl, Nan, Dessa, Corrin, Old Tam, Brenna, Wick, Jory.</li>
+<li><strong>Dwarves in the visitors' book:</strong> Durgan, Hilde, Borri, Thrain the Younger, Thrain the Other One.</li>
+<li><strong>More oxen:</strong> Biscuit, Sergeant, Maybe, Thunder, who is the slowest.</li>
+</ul>
+<h3>🧯 When things go sideways</h3>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The wolf fight is going badly</td>
+<td>The wolves grab one ox and leave. The party survives and the tracker takes the hit.</td>
+</tr>
+<tr>
+<td>Players want to hunt the dragon</td>
+<td>It is gone in thirty seconds. Bessa: "When you're done looking at the sky, the storm is that way."</td>
+</tr>
+<tr>
+<td>Players attack the eastbound travellers</td>
+<td>Ysolde surrenders at once to protect the children. Bessa docks all pay. Move on quickly.</td>
+</tr>
+<tr>
+<td>Players ignore the waystones</td>
+<td>That is fine. The inscription and the crew can still solve the door.</td>
+</tr>
+<tr>
+<td>Players solve the door instantly</td>
+<td>Let them. They earned it. Spend the saved time on the evening inside.</td>
+</tr>
+<tr>
+<td>Someone wants to sell or steal the bell</td>
+<td>It weighs 600 pounds and rings when moved. Bessa watches them try.</td>
+</tr>
+<tr>
+<td>The session is ending early</td>
+<td>Stop at the flame stone camp after Scene 3. Open next time with Day 4.</td>
+</tr>
+</tbody>
+</table></div>
+<h3>🗂️ What to have on the table</h3>
+<ul>
+<li>The caravan tracker card, face up.</li>
+<li>Seven small cards for Scene 4, one for each thing at risk.</li>
+<li>A card with four empty boxes for the storm clock.</li>
+<li>Your own note of the waystone answers: boot, tankard, flame.</li>
+<li>The Monster Manual open at Wolf.</li>
+</ul>
+<h3>🏮 Flavour pack: east and south</h3>
+<p>The Sword Coast trades with Kara-Tur in the far east and the Shining Lands in the far south-east, so their people, food and customs belong on this road. The bell, Master Liang and Auntie Devi's garlands are already in the main text. Add any of these.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Where</th>
+<th>What to add</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Triboar</td>
+<td>A tea stall by the wagon yard where orders are shouted in a private code nobody will explain. Regulars hold a table by leaving a handkerchief on it. Marda Voss has sat at a handkerchief table. The stall has gone very quiet.</td>
+</tr>
+<tr>
+<td>Camp food</td>
+<td>Grett learned to cook from a caravan cook of the Shining Lands. His red curry is known on the trail as Grett's Regret. Odo's burnt porridge is rice porridge, which is harder to burn, and he manages.</td>
+</tr>
+<tr>
+<td>Bessa's tea</td>
+<td>She takes it pulled: poured in a long stream between two cups, a yard apart, to cool it. She does this on a moving wagon and has never spilled any. She will not teach it.</td>
+</tr>
+<tr>
+<td>The peddler (random sighting 3)</td>
+<td>He carries a shoulder pole with two baskets: steamed buns in one, tea eggs in the other. He still does not stop walking.</td>
+</tr>
+<tr>
+<td>New sighting: the roadside shrine</td>
+<td>A knee-high shrine painted red, with old oranges and burnt-down incense sticks. It belongs to the spirit of this stretch of ground. A character who leaves an offering gains Heroic Inspiration. Grett always leaves a copper. "Costs a copper. Being wrong costs more."</td>
+</tr>
+<tr>
+<td>Night 3: the hungry month</td>
+<td>Use with or in place of the ghost drover. See below.</td>
+</tr>
+<tr>
+<td>Scene 3: Old Master Wen</td>
+<td>A Shou monk travelling with the families, in the opposite direction to his own plans. He is walking west to see the white dragon, "because I have seen all the other kinds." He offers fortune sticks. See below.</td>
+</tr>
+<tr>
+<td>Day 4: the birds</td>
+<td>Among the fleeing birds are a dozen winged people, flying hard. One of them looks down at the wagons and shouts a single word in Common: "WRONG WAY!"</td>
+</tr>
+<tr>
+<td>After the storm: an omen</td>
+<td>As the front passes, something gold and four-legged gallops across the sky above the clouds, and is gone. Grett sits down. "Ki-rin. My grandmother saw one. It means the worst is over." Bessa: "Does it?" Grett: "She died the next week. But peacefully."</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>The hungry month.</strong> On the third night, Grett sets out a bowl of rice and burns a few squares of paper at the edge of the firelight.</p>
+<blockquote class="read"><span class="tag">📖 Read aloud</span>
+<p>"It's the season. The ones with nobody to feed them go walking. You feed them, they walk on." He gives three rules, counting on his fingers. "Don't whistle after dark. Don't sit in the empty place by the fire, it's taken. And if something in the grass calls your name, it isn't for you."</p>
+</blockquote>
+<ul>
+<li>A character who breaks a rule hears their own name called from the dark, once, in a voice they nearly recognise. Nothing else happens until morning, when they find their bootlaces tied together.</li>
+<li>A character who adds to the offering sleeps well and gains Heroic Inspiration.</li>
+</ul>
+<p><strong>Master Wen's fortune sticks.</strong> Each character who asks shakes the pot and draws one. Roll a d6.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>d6</th>
+<th>The stick says</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"Great fortune. Eventually."</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"A heavy thing will make a loud noise." He looks at the bell. "This one is not difficult."</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"You will solve a problem by remembering your feet, your cup and your fire." This is a hint for the door in Scene 5.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"Beware the cold. Also the hot. Moderate temperatures are favourable."</td>
+</tr>
+<tr>
+<td>5</td>
+<td>"Someone small will be braver than someone large." Odo asks which one he is.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Blank. Master Wen studies it for some time. "Ah. You will have to decide for yourself. Unlucky."</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Names.</strong> Shou: Liang Shu, Wen, Mei Lin, Tan Ko, Old Bao. Shining Lands: Devi, Arjun, Sundari, Ravi, Meenu.</p>
+<h3>😏 Humour bank</h3>
+<p>The tone is dry. Nobody in the story knows they are funny. Use one line per scene at most, and never during the worst minute of the storm. If a player makes a better joke, theirs wins.</p>
+<p><strong>Deadpan answers.</strong> For any crew member, any time.</p>
+<ul>
+<li>Odo: "Wolves! What do we do?" Grett: "Ideally, something."</li>
+<li>A player: "Can I ask you a question?" Bessa: "You just did. That was your one."</li>
+<li>Odo: "Is the bridge out?" Grett: "No. It's in. It's in the river."</li>
+<li>A player: "How bad is it?" Grett: "On a scale of one to ten? It's a storm."</li>
+<li>Bessa, to worried onlookers, with something on fire behind her: "Nothing to see here. Please keep moving."</li>
+<li>Grett: "Same every trip. Leave Triboar, cross the plain, storm of the century, home for supper."</li>
+</ul>
+<p><strong>The captain's log.</strong> Bessa narrates in log entries, and adds supplements when annoyed.</p>
+<ul>
+<li>"Trail log, supplemental. The guard has asked if we are there yet. It is day one."</li>
+<li>"Trail log. Encountered new life. It bit an ox."</li>
+<li>Grett will say "I'm a drover, not a..." and finish it differently each time: wheelwright, healer, bridge, miracle worker.</li>
+<li>The whole crew glances at Odo's red scarf whenever danger is mentioned. Nobody says why.</li>
+<li>Bessa, on the orcs: "We do not interfere with the locals. We pay them or we go round them. That is the entire policy."</li>
+<li>Sergeant Kane gives all bad news as a recommendation. "I recommend we do not do that."</li>
+</ul>
+<p><strong>The pedant.</strong> Bessa is exact about everything, at length.</p>
+<ul>
+<li>The left end of the bench on wagon 1 is her spot. If a character sits there, she explains why it is her spot: sight line to the lead oxen, distance from Grett's pipe, angle of the afternoon sun. She is still explaining when they move.</li>
+<li>"It is not a 'big bell'. It is a bell of four feet and six hundred pounds. 'Big' is how amateurs lose cargo."</li>
+<li>Odo never wakes anyone without knocking three times on the wagon and saying their name each time. Knock, "Bessa." Knock, "Bessa." Knock, "Bessa." She has stopped fighting it.</li>
+<li>Grett and Odo settle arguments with a hand game called boot-tankard-flame. Boot stamps out flame, flame boils tankard, tankard fills boot. Odo keeps suggesting extra moves. This also quietly teaches the players the answer to the door.</li>
+</ul>
+<p><strong>The narrator.</strong> Lines for you, in the voice of someone who has read too many footnotes.</p>
+<ul>
+<li>"The Triboar Trail is exactly as long as it is, and resents being asked."</li>
+<li>"Oxen have two speeds: slow, and no."</li>
+<li>"It was the kind of silence that has teeth."</li>
+<li>"Dwarves do not build things to last. They build things to outlast, which is more personal."</li>
+<li>"Grett's stew had been going so long that it had opinions."</li>
+</ul>
+<h3>🔁 Swap-in spectacles for Scene 4</h3>
+<p>Each of these uses the same "one action each, seven things at risk" structure. Change only the description and the checks.</p>
+<div class="tw"><table>
+<thead>
+<tr>
+<th>Spectacle</th>
+<th>What threatens the caravan</th>
+<th>Twist</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A stone giant walking the trail</td>
+<td>It does not notice wagons underfoot.</td>
+<td>It will stop and trade for something shiny. The bell is very shiny.</td>
+</tr>
+<tr>
+<td>A wizard's walking tower</td>
+<td>Wild magic trails behind it, and things float, shrink or turn blue.</td>
+<td>A window opens and someone shouts an apology.</td>
+</tr>
+<tr>
+<td>The great herd from day two, stampeding</td>
+<td>Thousands of hooves, and the trail is in the way.</td>
+<td>Something is chasing them. The party only sees its shadow.</td>
+</tr>
+<tr>
+<td>A silent ghost procession at night</td>
+<td>Oxen panic, and crew try to join the march.</td>
+<td>The ghosts are walking to the fourth waystone. They open the door for you.</td>
+</tr>
+</tbody>
+</table></div><a class="top" href="#top">↑ Back to contents</a></section>
+<section id="cards"><h2>✂️ Table cards to print</h2><p>Print this page, cut along the dashed lines, and keep the tracker in front of the players. Anything marked DM only stays behind your screen.</p>
+<div class="cards">
+ <div class="card"><h4>📋 Caravan tracker</h4>
+  <div class="row"><span>🔔 The bell (50 gp)</span><span><span class="box"></span></span></div>
+  <div class="row"><span>🛒 Wagons of goods (20 gp each)</span><span><span class="box"></span><span class="box"></span></span></div>
+  <div class="row"><span>🐂 Oxen (5 gp each)</span><span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span></span></div>
+  <div class="row"><span>👥 Crew well</span><span><span class="box"></span><span class="box"></span><span class="box"></span></span></div>
+  <div class="row"><span>⏳ Delay boxes (−5 gp each)</span><span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span></span></div>
+  <p class="small">Tick what is still with the caravan. Mark a delay box each time the DM calls one.</p></div>
+ <div class="card"><h4>🌨️ Scene 4 · things at risk</h4><div class="row"><span>Wagon 1 · the bell</span><span><span class="box"></span> saved</span></div><div class="row"><span>Wagon 2 · food and water</span><span><span class="box"></span> saved</span></div><div class="row"><span>Wagon 3 · wine and tea</span><span><span class="box"></span> saved</span></div><div class="row"><span>Ox pair 2</span><span><span class="box"></span> saved</span></div><div class="row"><span>Ox pair 3</span><span><span class="box"></span> saved</span></div><div class="row"><span>Grett</span><span><span class="box"></span> saved</span></div><div class="row"><span>Odo</span><span><span class="box"></span> saved</span></div>
+  <p class="small">One action per player. <span class="dc">DC 12</span></p></div>
+ <div class="card"><h4>⏲️ Scene 5 · storm clock</h4><p><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span></p>
+  <p class="small">Mark one box for each wrong lever pull or failed attempt to force the door.</p>
+  <h4>🪨 Waystones (DM only)</h4>
+  <div class="row"><span>Day 1 · one notch</span><span>Boot</span></div>
+  <div class="row"><span>Day 2 · two notches</span><span>Tankard</span></div>
+  <div class="row"><span>Day 3 · three notches</span><span>Flame</span></div></div>
+ <div class="card"><h4>🧧 Liang's blessing</h4><p><span class="box"></span> One reroll of a d20, once in the whole adventure.</p>
+  <h4>🐺 Wolves in Scene 2</h4>
+  <div class="row"><span>4 players</span><span>3 wolves</span></div>
+  <div class="row"><span>5 players</span><span>4 wolves</span></div>
+  <div class="row"><span>6 players</span><span>5 wolves</span></div></div>
+</div></section>
+<footer>Original fan-made adventure for personal use at the table. Monster numbers are quick-reference summaries; see the Monster Manual for full stat blocks.</footer>
+</main></div></body></html>
